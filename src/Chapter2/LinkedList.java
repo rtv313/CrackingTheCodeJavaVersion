@@ -10,17 +10,18 @@ public class LinkedList {
         tail = null;
     }
 
-    public void addNode(int data){
+    public Node addNode(int data){
         Node newNode = new Node(data);
 
         if (head == null) {
             head = newNode;
             tail = newNode;
-            return;
+            return newNode;
         }
 
         tail.next = newNode;
         tail = tail.next;
+        return  newNode;
     }
 
     public void displayList(){
