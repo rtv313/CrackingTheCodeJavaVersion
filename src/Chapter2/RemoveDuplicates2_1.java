@@ -11,7 +11,7 @@ public class RemoveDuplicates2_1 {
             boolean findDuplicate = false;
 
             while(runnerTwo != null){
-                //CheckLast
+                //Check if pre last node
                 if(runnerTwo.next!=null && runnerTwo.next.next == null && runnerTwo.next.data == runner.data){
                     runnerTwo.next = null;
                     list.tail = runnerTwo;
