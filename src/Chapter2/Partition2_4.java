@@ -21,9 +21,14 @@ public class Partition2_4 {
             runner = runner.next;
         }
 
-        belowX.tail.next = equalX.head;
-        equalX.tail.next = aboveX.head;
-        list.head = belowX.head;
+        if(equalX.head == null){
+            belowX.tail.next = aboveX.head;
+            list.head = belowX.head;
+        }else{
+            belowX.tail.next = equalX.head;
+            equalX.tail.next = aboveX.head;
+            list.head = belowX.head;
+        }
     }
 
     public static void main(String args[]){
@@ -33,7 +38,7 @@ public class Partition2_4 {
         list.addNode(8);
         list.addNode(7);
         list.addNode(6);
-        list.addNode(5);
+        //list.addNode(5);
         list.addNode(4);
         list.addNode(3);
         list.addNode(2);
