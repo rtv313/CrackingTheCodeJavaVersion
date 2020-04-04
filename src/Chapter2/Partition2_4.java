@@ -38,9 +38,7 @@ public class Partition2_4 {
         list.addNode(3);
         list.addNode(2);
         list.addNode(1);
-
         partition(list,5);
         list.displayList();
-
     }
 }
