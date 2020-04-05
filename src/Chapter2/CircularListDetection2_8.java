@@ -32,7 +32,6 @@ public class CircularListDetection2_8 {
         Node nodeIntersec = listOne.addNode(4);
         listOne.addNode(5);
         listOne.addNode(6).next = nodeIntersec;
-
         System.out.println(detectCircularNode(listOne).data);
     }
 }
