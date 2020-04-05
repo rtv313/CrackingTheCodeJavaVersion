@@ -22,7 +22,6 @@ public class ThreeStacksOneArray3_1 {
    boolean flagStartEmptyStackThree = true;
 
 
-
     public boolean push(int stack,int data){
 
         switch(stack) {
