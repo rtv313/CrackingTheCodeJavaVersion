@@ -48,6 +48,7 @@ public class StackMin3_2 {
     }
 
     public static void main(String args[]){
+
         StackMin3_2 stackMin = new StackMin3_2();
         stackMin.push(5);
         stackMin.push(4);
