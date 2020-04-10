@@ -53,7 +53,7 @@ public class IsBst4_5 {
         Node rootNode = MinimalTree4_2.createMinimalTree(sortedArray,0,sortedArray.length-1);
 
         int[] sortedArray2 = new int[]{0, 1, 8, 3, 4, 5, 6, 7};
-        Node rootNode2 = MinimalTree4_2.createMinimalTree(sortedArray,0,sortedArray.length-1);
+        Node rootNode2 = MinimalTree4_2.createMinimalTree(sortedArray2,0,sortedArray2.length-1);
 
         System.out.println(checkBst(rootNode));
         System.out.println(checkBst(rootNode2));
