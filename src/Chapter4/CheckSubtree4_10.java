@@ -52,6 +52,5 @@ public class CheckSubtree4_10 {
         listNodesT2 = new int[]{5, 6, 7, 8};
         rootTreeTwo = createTreeWithParent(listNodesT2,0,listNodesT2.length-1,null);
         System.out.println(checkIsSubTree(rootTreeOne,rootTreeTwo));
-
     }
 }
