@@ -55,9 +55,7 @@ public class BstSequences4_9 {
 
         LinkedList<LinkedList<Integer>> levelCombinations = new <LinkedList<Integer>> LinkedList();
         permutations(listDepths.get(levelIndex),0,levelCombinations);
-
         LinkedList<LinkedList<Integer>> result = new <LinkedList<Integer>> LinkedList();
-
         LinkedList<LinkedList<Integer>> nextLevelCombinations = allCombinations(listDepths,levelIndex + 1);
 
         for(LinkedList<Integer> level : levelCombinations){
@@ -65,7 +63,6 @@ public class BstSequences4_9 {
                 result.add(level);
             }else{
                 for(LinkedList<Integer> nextLevel : nextLevelCombinations){
-
                     LinkedList<Integer> levelCopy = new <Integer> LinkedList(level);
                     levelCopy.addAll(nextLevel);
                     result.add(levelCopy);
@@ -74,7 +71,6 @@ public class BstSequences4_9 {
         }
         return result;
     }
-
 
     public static void main(String args[]){
 
@@ -86,13 +82,5 @@ public class BstSequences4_9 {
 
         for(LinkedList<Integer> result : results)
             System.out.println(result);
-
-        /*
-        LinkedList<Integer> list = new LinkedList<Integer>();
-        list.add(1);
-        list.add(2);
-        LinkedList<LinkedList<Integer>> permutations = new LinkedList<LinkedList<Integer>>();
-        permutations(list,0,permutations);
-        System.out.println(permutations); */
     }
 }
