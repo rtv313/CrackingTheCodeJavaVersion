@@ -16,7 +16,7 @@ public class CheckTreeBalanced4_4 {
         if(rootNode == null)
             return true;
 
-        int resultHeight = Math.abs(getHeight(rootNode.leftSon,0)-getHeight(rootNode.rightSon,0));
+        int resultHeight = Math.abs(getHeight(rootNode.leftSon,0) - getHeight(rootNode.rightSon,0));
 
         if(resultHeight > 1)
             return false;

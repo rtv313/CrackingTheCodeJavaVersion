@@ -58,7 +58,6 @@ public class QueueWithStacks3_4 {
         queue.push(3);
 
         System.out.println(queue.peek());
-
         System.out.println(queue.pop());
         System.out.println(queue.pop());
         System.out.println(queue.pop());
