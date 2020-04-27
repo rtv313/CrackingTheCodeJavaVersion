@@ -2,6 +2,7 @@ package Chapter4;
 import Chapter2.Node;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 
 import static Chapter4.FindSuccesor4_6.createTreeWithParent;
@@ -28,18 +29,14 @@ public class CommonAncestor4_8 {
         concatenateLists.addAll(listAncestorsOne);
         concatenateLists.addAll(listAncestorsTwo);
 
-        HashMap<Integer,Integer> dictionary = new <Integer,Integer> HashMap();
+        HashSet<NodeWP> set = new <NodeWP> HashSet();
 
         for(NodeWP node : concatenateLists){
 
-            if(dictionary.containsKey(node.hashCode())){
-                int counter = dictionary.get(node.hashCode()) + 1;
-                dictionary.put(node.hashCode(),counter);
-
-                if(dictionary.get(node.hashCode())==2)
-                    return node;
+            if(set.contains(node)){
+                return node;
             }else{
-                dictionary.put(node.hashCode(),1);
+                set.add(node);
             }
         }
         return null;

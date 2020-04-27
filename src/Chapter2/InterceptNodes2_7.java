@@ -1,35 +1,25 @@
 package Chapter2;
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class InterceptNodes2_7 {
 
     public static Node getInterceptNode(LinkedList listOne,LinkedList listTwo){
-        HashMap<Node,Integer> nodesCounterMap = new HashMap<>();
+        HashSet<Node> nodesSet = new HashSet<Node>();
         Node runnerListOne = listOne.head;
         Node runnerListTwo = listTwo.head;
 
         while(runnerListOne != null){
-
-            if(nodesCounterMap.containsKey(runnerListOne)){
-                int counter = nodesCounterMap.get(runnerListOne) + 1;
-                nodesCounterMap.put(runnerListOne,counter);
-            }else{
-                nodesCounterMap.put(runnerListOne,1);
-            }
+            nodesSet.add(runnerListOne);
             runnerListOne = runnerListOne.next;
         }
 
         while(runnerListTwo != null){
 
-            if(nodesCounterMap.containsKey(runnerListTwo)){
-                int counter = nodesCounterMap.get(runnerListTwo) + 1;
-                if(counter > 1)
-                    return runnerListTwo;
-                nodesCounterMap.put(runnerListTwo,counter);
-            }else{
-                nodesCounterMap.put(runnerListTwo,1);
-            }
+            if(nodesSet.contains(runnerListTwo))
+                return runnerListTwo;
+
             runnerListTwo = runnerListTwo.next;
         }
 

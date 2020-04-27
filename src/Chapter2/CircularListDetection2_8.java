@@ -1,24 +1,22 @@
 package Chapter2;
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class CircularListDetection2_8 {
 
     public static Node detectCircularNode(LinkedList list){
 
-        HashMap<Node,Integer> counterNodes = new HashMap<>();
+        HashSet<Node> counterNodes = new HashSet<Node>();
         Node runner = list.head;
 
         while(runner != null){
 
-            if(counterNodes.containsKey(runner)){
-                int counter = counterNodes.get(runner) + 1;
-                if (counter >= 2)
-                    return runner;
-                counterNodes.put(runner,counter);
-            }else{
-                counterNodes.put(runner,1);
-            }
+           if(counterNodes.contains(runner)){
+               return runner;
+           }else{
+               counterNodes.add(runner);
+           }
             runner = runner.next;
         }
         return null;
