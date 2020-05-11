@@ -13,15 +13,8 @@ public class IsUnique1_1 {
             if (charsCount.get(key)==null) {
                 charsCount.put(key, 1);
             }else{
-                int count = charsCount.get(key) + 1;
-                charsCount.put(key,count);
-            }
-        }
-
-        for (String key : charsCount.keySet()) {
-
-            if (charsCount.get(key) > 1)
                 return false;
+            }
         }
         return true;
     }
