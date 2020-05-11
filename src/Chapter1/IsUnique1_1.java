@@ -6,7 +6,7 @@ public class IsUnique1_1 {
 
     public static boolean all_chars_unique(String string){
 
-        Hashtable<String, Integer> charsCount = new Hashtable<String, Integer>();
+        Hashtable<String,Integer> charsCount = new Hashtable<String, Integer>();
 
         for (char ch: string.toCharArray()){
             String key = "" + ch;

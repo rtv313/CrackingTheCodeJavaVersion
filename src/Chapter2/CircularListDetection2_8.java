@@ -28,8 +28,18 @@ public class CircularListDetection2_8 {
         listOne.addNode(2);
         listOne.addNode(3);
         Node nodeIntersec = listOne.addNode(4);
-        listOne.addNode(5);
+        listOne.addNode(6);
         listOne.addNode(6).next = nodeIntersec;
         System.out.println(detectCircularNode(listOne).data);
+
+
+        LinkedList listTwo = new LinkedList();
+        listTwo.addNode(1);
+        listTwo.addNode(2);
+        listTwo.addNode(3);
+        listTwo.addNode(4);
+        listTwo.addNode(5);
+        listTwo.addNode(5);
+        System.out.println(detectCircularNode(listTwo));
     }
 }
